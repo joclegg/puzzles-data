@@ -11,7 +11,7 @@ def key(folder, line):
 
 
 failed = False
-for folder in ("sudoku", "kakuro", "slideout", "wordwheel"):
+for folder in ("sudoku", "kakuro", "slideout", "solitaire", "wordwheel"):
     for name in sorted(os.listdir(folder)):
         if not name.endswith(".txt") or name == "valid.txt":
             continue
