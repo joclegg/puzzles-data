@@ -10,6 +10,8 @@ One puzzle per line. Files are plain text.
 | `kakuro/` | `<size>.txt` | `size;solution;givens`: the solution row by row, `0` for a black cell, then the given cells as indexes joined by `,`. |
 | `slideout/` | `<level>.txt` | `par;blocks`: par is the fewest moves; each block is `row col length H\|V`, the red block first. Levels: beginner 4–9 moves, easy 10–16, medium 17–24, hard 25–32, expert 33–40, evil 41+. |
 | `words/` | `answers.txt`, `guesses.txt` | Five Letters: one lowercase word per line. |
-| `wordwheel/` | `five.txt`, `six.txt`, `seven.txt`, `valid.txt` | Word Wheel puzzles and the accepted words. See `wordwheel/NOTICE.md`. |
+| `wordwheel/` | `five.txt`, `six.txt`, `seven.txt`, `valid.txt` | `letters;placements`: the wheel's letters, then each crossword word as `WORD@row,col,A\|D` (across or down) joined by `\|`, the word using every letter first. `valid.txt` holds the accepted words, one uppercase word per line. See `wordwheel/NOTICE.md` for the word lists' licence. |
+
+`scripts/check_duplicates.py` fails if a bank holds the same puzzle twice (Slide Out blocks after the red one may be in any order); CI runs it on every push.
 
 The generators live in puzzles-android (`./gradlew :<game>:engine:generateBank`) and write here.
