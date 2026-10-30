@@ -15,4 +15,6 @@ One puzzle per line. Files are plain text.
 
 `scripts/check_duplicates.py` fails if a bank holds the same puzzle twice (Slide Out blocks after the red one may be in any order); CI runs it on every push.
 
+Every merge to `main` publishes the banks to https://joclegg.github.io/puzzles-data/ (`.github/workflows/publish.yml`), with `manifest.json` listing each file's SHA-256 and line count. The apps download changed banks from there and keep them on the device, so new puzzles reach players without an app release.
+
 The generators live in puzzles-android (`./gradlew :<game>:engine:generateBank`) and write here.
