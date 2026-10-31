@@ -1,6 +1,6 @@
 # puzzles-data
 
-The puzzle banks and word lists shared by [puzzles-android](https://github.com/joclegg/puzzles-android) and [puzzles-web](https://github.com/joclegg/puzzles-web). Both apps include this repository as a git submodule at `puzzles-data/`.
+The puzzle banks and word lists shared by [puzzles-android](https://github.com/joclegg/puzzles-android) and [puzzles-web](https://github.com/joclegg/puzzles-web). Both apps download them from https://joclegg.github.io/puzzles-data/, which this repository publishes on every merge.
 
 One puzzle per line. Files are plain text.
 
