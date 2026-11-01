@@ -1,8 +1,10 @@
 # puzzles-data
 
-The puzzle banks and word lists shared by [puzzles-android](https://github.com/joclegg/puzzles-android) and [puzzles-web](https://github.com/joclegg/puzzles-web). Both apps download them from https://joclegg.github.io/puzzles-data/, which this repository publishes on every merge.
+The puzzle banks and word lists behind Puzzles. The [Android](https://github.com/joclegg/puzzles-android), [iOS](https://github.com/joclegg/puzzles-ios) and [web](https://github.com/joclegg/puzzles-web) apps all download them from https://joclegg.github.io/puzzles-data/, which this repository publishes on every merge, so new puzzles reach players without an app release.
 
-One puzzle per line. Files are plain text.
+Every file is plain text, one puzzle per line.
+
+## Formats
 
 | Folder | Files | Line format |
 | --- | --- | --- |
@@ -13,8 +15,12 @@ One puzzle per line. Files are plain text.
 | `words/` | `answers.txt`, `guesses.txt` | Five Letters: one lowercase word per line. |
 | `wordwheel/` | `five.txt`, `six.txt`, `seven.txt`, `valid.txt` | `letters;placements`: the wheel's letters, then each crossword word as `WORD@row,col,A\|D` (across or down) joined by `\|`, the word using every letter first. `valid.txt` holds the accepted words, one uppercase word per line. See `wordwheel/NOTICE.md` for the word lists' licence. |
 
-`scripts/check_duplicates.py` fails if a bank holds the same puzzle twice (Slide Out blocks after the red one may be in any order); CI runs it on every push.
+## Checking and publishing
 
-Every merge to `main` publishes the banks to https://joclegg.github.io/puzzles-data/ (`.github/workflows/publish.yml`), with `manifest.json` listing each file's SHA-256 and line count. The apps download changed banks from there and keep them on the device, so new puzzles reach players without an app release.
+`scripts/banks.py` lists the published folders. `scripts/check_duplicates.py` fails if a bank holds the same puzzle twice (Slide Out blocks after the red one may be in any order); CI runs it on every push.
 
-The generators live in puzzles-android (`./gradlew :<game>:engine:generateBank`) and write here.
+Every merge to `main` publishes the banks to https://joclegg.github.io/puzzles-data/ (`.github/workflows/publish.yml`), with `manifest.json` listing each file's SHA-256 and line count. The apps download changed banks from there and keep them on the device.
+
+## Generating
+
+The generators live in puzzles-android (`./gradlew :<game>:engine:generateBank`) and puzzles-web (`scripts/solitaireBank.mjs`), and write here.
