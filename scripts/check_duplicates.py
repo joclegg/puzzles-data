@@ -2,6 +2,8 @@
 import os
 import sys
 
+from banks import PUZZLE_FOLDERS
+
 
 def key(folder, line):
     if folder == "slideout":
@@ -11,7 +13,7 @@ def key(folder, line):
 
 
 failed = False
-for folder in ("sudoku", "kakuro", "slideout", "solitaire", "wordwheel"):
+for folder in PUZZLE_FOLDERS:
     for name in sorted(os.listdir(folder)):
         if not name.endswith(".txt") or name == "valid.txt":
             continue

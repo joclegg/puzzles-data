@@ -4,9 +4,11 @@ import json
 import os
 import sys
 
+from banks import PUBLISHED_FOLDERS
+
 out = sys.argv[1]
 files = {}
-for folder in ("sudoku", "kakuro", "slideout", "solitaire", "wordwheel", "words"):
+for folder in PUBLISHED_FOLDERS:
     for name in sorted(os.listdir(folder)):
         if not name.endswith(".txt"):
             continue
