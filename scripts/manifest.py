@@ -16,7 +16,7 @@ def main(out):
                 "sha256": hashlib.sha256(data).hexdigest(),
                 "lines": sum(1 for line in data.splitlines() if line.strip()),
             }
-    Path(out).write_text(json.dumps({"files": files}, indent=1, sort_keys=True))
+    Path(out).write_text(json.dumps({"files": files}, separators=(",", ":"), sort_keys=True))
     print(f"{len(files)} files")
 
 
