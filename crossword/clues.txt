@@ -170,6 +170,7 @@ ACTION;Deed
 ACTIVATE;Switch on
 ACTIVATION;Triggering
 ACTIVE;Lively
+ACTIVISM;Campaigning for change
 ACTIVIST;Campaigner
 ACTIVITY;Pastime
 ACTOR;Thespian
@@ -999,6 +1000,7 @@ AUTOCRATIC;Despotic
 AUTOGRAPH;Signature
 AUTOMATE;Mechanise
 AUTOMATIC;Self-acting
+AUTOMATION;Use of machines in place of people
 AUTOMOBILE;Motor car
 AUTOMOTIVE;Of cars
 AUTONOMOUS;Self-governing
@@ -1071,6 +1073,7 @@ BACKER;Sponsor
 BACKFIRE;Go wrong
 BACKGAMMON;Board game
 BACKGROUND;Setting
+BACKHAND;Tennis stroke
 BACKHANDED;Ambiguous, of a compliment
 BACKING;Support
 BACKLASH;Adverse reaction
@@ -1145,6 +1148,7 @@ BANDWAGON;Popular trend
 BANDY;Bow-legged
 BANE;Curse
 BANG;Explosion
+BANGLE;Rigid bracelet
 BANISH;Exile
 BANISTER;Handrail
 BANJO;Stringed instrument
@@ -1184,6 +1188,7 @@ BAROMETRIC;Of air pressure
 BARON;Noble
 BARRACKS;Soldiers' quarters
 BARRAGE;Bombardment
+BARREL;Cask
 BARREN;Infertile
 BARRICADE;Blockade
 BARRIER;Obstacle
@@ -1447,6 +1452,7 @@ BISHOP;Chess piece
 BISON;Buffalo
 BIT;Piece
 BITE;Nibble
+BITING;Piercingly cold
 BITTEN;Nipped
 BITTER;Resentful
 BITTERLY;Resentfully
@@ -1607,6 +1613,7 @@ BOILING;Very hot
 BOISTEROUS;Rowdy
 BOLD;Brave
 BOLDLY;Bravely
+BOLDNESS;Daring
 BOLOGNA;Italian sausage
 BOLSTER;Support
 BOLT;Bar
@@ -1706,6 +1713,7 @@ BOURBON;American whiskey
 BOURGEOIS;Middle-class
 BOURGEOISIE;Middle class
 BOUT;Spell
+BOUTIQUE;Small fashion shop
 BOVINE;Cow-like
 BOW;Ribbon knot
 BOWEL;Intestine
@@ -1714,6 +1722,7 @@ BOWLING;Tenpins
 BOX;Carton
 BOXCAR;Goods wagon
 BOXER;Pugilist
+BOXING;Sport of pugilists
 BOY;Lad
 BOYCOTT;Embargo
 BOYFRIEND;Male partner
@@ -1772,6 +1781,7 @@ BREAKDOWN;Collapse
 BREAKFAST;Morning meal
 BREAKNECK;Dangerously fast
 BREAKUP;Split
+BREAKWATER;Harbour barrier
 BREAST;Chest
 BREATH;Gasp
 BREATHE;Inhale
@@ -1868,12 +1878,14 @@ BRUSH;Broom
 BRUSQUE;Curt
 BRUTAL;Savage
 BRUTALITY;Savagery
+BRUTALIZE;Treat savagely
 BRUTALLY;Savagely
 BRUTE;Beast
 BRUTISH;Savage
 BUBBLE;Globule
 BUBBLY;Champagne
 BUCK;Male deer
+BUCKET;Pail
 BUCKLE;Clasp
 BUD;Shoot
 BUDDING;Promising
@@ -1924,6 +1936,7 @@ BUNGALOW;Single-storey house
 BUNGLE;Botch
 BUNGLER;Clumsy botcher
 BUNION;Painful toe swelling
+BUNK;Narrow bed
 BUNNY;Child's word for a rabbit
 BUNS;Small sweet rolls
 BUOY;Floating marker
@@ -2056,6 +2069,7 @@ CAMELLIA;Glossy-leaved flowering shrub
 CAMEO;Brief film role
 CAMERA;Photographer's device
 CAMERAMAN;Film photographer
+CAMOUFLAGE;Disguise
 CAMP;Bivouac
 CAMPAIGN;Crusade
 CAMPAIGNER;Activist
@@ -2069,6 +2083,7 @@ CANARY;Yellow songbird
 CANCEL;Call off
 CANCER;Crab of the zodiac
 CANDID;Frank
+CANDIDACY;Standing for office
 CANDIDATE;Applicant
 CANDIDLY;Frankly
 CANDLE;Wax light
@@ -2268,6 +2283,7 @@ CELEBRATION;Party
 CELEBRITY;Star
 CELERY;Salad stalks
 CELESTIAL;Heavenly
+CELIBACY;Abstinence from marriage
 CELIBATE;Unmarried and chaste
 CELL;Prison room
 CELLAR;Basement
@@ -2463,6 +2479,7 @@ CHIT;Note
 CHITCHAT;Small talk
 CHIVALROUS;Gallant
 CHIVALRY;Gallantry
+CHIVES;Onion-flavoured herbs
 CHLORINATE;Disinfect a pool
 CHLORINE;Pool disinfectant
 CHLOROFORM;Old anaesthetic
@@ -2564,6 +2581,7 @@ CLAPBOARD;Weatherboard
 CLAPPER;Bell's tongue
 CLARIFY;Explain
 CLARINET;Woodwind instrument
+CLARITY;Lucidity
 CLASH;Conflict
 CLASP;Grip
 CLASS;Category
@@ -2695,6 +2713,7 @@ COARSEN;Roughen
 COAST;Seashore
 COASTAL;Seaside
 COASTER;Drinks mat
+COASTLINE;Seaboard
 COAT;Jacket
 COATING;Layer
 COAX;Cajole
@@ -2757,6 +2776,7 @@ COLLEAGUE;Co-worker
 COLLECT;Gather
 COLLECTED;Composed
 COLLECTIBLE;Item worth keeping
+COLLECTION;Assortment
 COLLECTIVE;Joint
 COLLECTOR;Gatherer
 COLLEGE;University
@@ -2772,6 +2792,7 @@ COLONEL;Army officer
 COLONIAL;Of an empire's settlements
 COLONIALISM;Imperialism
 COLONIST;Settler
+COLONIZE;Settle as a territory
 COLONY;Settlement
 COLOSSAL;Huge
 COLT;Young horse
@@ -2783,8 +2804,10 @@ COMB;Hair tidier
 COMBAT;Fight
 COMBATANT;Fighter
 COMBATIVE;Aggressive
+COMBINATION;Mixture
 COMBINE;Merge
 COMBINED;Joint
+COMBUSTIBLE;Flammable
 COMBUSTION;Burning
 COME;Arrive
 COMEBACK;Return
@@ -2836,6 +2859,7 @@ COMMOTION;Fuss
 COMMUNAL;Shared
 COMMUNE;Collective
 COMMUNICATE;Convey
+COMMUNION;Fellowship
 COMMUNIQUE;Official statement
 COMMUNISM;Marxism
 COMMUNIST;Marxist
@@ -2877,9 +2901,12 @@ COMPLETELY;Totally
 COMPLETION;Conclusion
 COMPLEX;Complicated
 COMPLEXION;Skin tone
+COMPLEXITY;Intricacy
 COMPLIANCE;Obedience
 COMPLIANT;Obedient
 COMPLICATED;Intricate
+COMPLICITY;Involvement in wrongdoing
+COMPLIMENT;Flattering remark
 COMPLIMENTS;Praise
 COMPLY;Obey
 COMPONENT;Part
@@ -2900,6 +2927,7 @@ COMPULSION;Urge
 COMPULSIVE;Obsessive
 COMPULSORY;Mandatory
 COMPUNCTION;Scruple
+COMPUTATION;Calculation
 COMPUTE;Calculate
 COMPUTER;PC
 COMPUTERIZE;Automate with a PC
@@ -2930,9 +2958,11 @@ CONCERTO;Work for soloist and orchestra
 CONCIERGE;Hotel porter
 CONCILIATE;Pacify
 CONCISE;Brief
+CONCISELY;Briefly and clearly
 CONCISENESS;Brevity
 CONCLUDE;Finish
 CONCLUDING;Final
+CONCLUSION;End
 CONCLUSIVE;Decisive
 CONCOCT;Devise
 CONCOCTION;Brew
@@ -2962,6 +2992,7 @@ CONDUCTOR;Orchestra leader
 CONE;Ice-cream holder
 CONFEDERACY;League
 CONFEDERATE;Ally
+CONFER;Consult together
 CONFERENCE;Meeting
 CONFESS;Admit
 CONFESSED;Admitted
@@ -2982,6 +3013,7 @@ CONFISCATE;Seize
 CONFLICT;Dispute
 CONFORM;Comply
 CONFORMIST;Traditionalist
+CONFORMITY;Compliance
 CONFOUND;Baffle
 CONFRONT;Face up to
 CONFUSE;Baffle
@@ -3002,6 +3034,7 @@ CONJECTURE;Speculation
 CONJUGAL;Marital
 CONJUGATE;Inflect a verb
 CONJUGATION;Verb inflection
+CONJUNCTION;Joining word
 CONJURE;Perform magic
 CONNECT;Link
 CONNECTED;Linked
@@ -3033,6 +3066,7 @@ CONSIGNMENT;Shipment
 CONSIST;Be made up
 CONSISTENCY;Texture
 CONSISTENT;Steady
+CONSOLATION;Comfort
 CONSOLE;Comfort
 CONSOLIDATE;Strengthen
 CONSOMME;Clear soup
@@ -3074,6 +3108,7 @@ CONTEMPT;Scorn
 CONTEND;Compete
 CONTENDER;Rival
 CONTENT;Satisfied
+CONTENTED;Satisfied
 CONTENTEDLY;Happily
 CONTENTION;Dispute
 CONTENTIOUS;Controversial
@@ -3098,6 +3133,7 @@ CONTORTION;Twisting
 CONTOUR;Outline
 CONTRABAND;Smuggled goods
 CONTRACT;Agreement
+CONTRACTION;Shortening
 CONTRACTOR;Builder
 CONTRACTUAL;Agreed in writing
 CONTRADICT;Deny
@@ -3133,11 +3169,13 @@ CONVEX;Curved outwards
 CONVEY;Transport
 CONVICT;Prisoner
 CONVICTION;Belief
+CONVINCE;Persuade
 CONVINCED;Certain
 CONVINCING;Persuasive
 CONVIVIAL;Friendly
 CONVOLUTED;Complicated
 CONVOY;Fleet of vehicles
+CONVULSE;Shake violently
 CONVULSION;Fit
 COO;Dove's sound
 COOK;Chef
@@ -3188,9 +3226,11 @@ CORNMEAL;Maize flour
 CORNSTARCH;Cornflour
 CORNY;Trite
 CORONARY;Heart attack
+CORONATION;Crowning ceremony
 CORONER;Inquest official
 CORPORAL;Army NCO
 CORPORATE;Of a company
+CORPORATION;Large company
 CORPS;Army unit
 CORPSE;Dead body
 CORPULENT;Fat
@@ -3198,6 +3238,7 @@ CORPUSCLE;Blood cell
 CORRAL;Livestock pen
 CORRECT;Right
 CORRECTION;Amendment
+CORRECTIVE;Remedial
 CORRECTLY;Rightly
 CORRECTNESS;Accuracy
 CORRELATE;Match up
@@ -3262,6 +3303,7 @@ COURTROOM;Place of trial
 COURTSHIP;Wooing
 COURTYARD;Quadrangle
 COUSIN;Uncle's child
+COVE;Small bay
 COVENANT;Pact
 COVER;Lid
 COVERAGE;Reporting
@@ -3270,6 +3312,7 @@ COVERED;Hidden
 COVERING;Layer
 COVERS;Bedclothes
 COVERT;Secret
+COVERTLY;Secretly
 COVET;Envy
 COVETOUS;Envious
 COW;Dairy animal
@@ -3504,6 +3547,7 @@ CURLY;Wavy
 CURRANT;Dried grape
 CURRENCY;Money
 CURRENT;Present
+CURRENTLY;At present
 CURRICULA;Courses of study
 CURRICULUM;Course of study
 CURRY;Spicy dish
@@ -3623,6 +3667,7 @@ DAYDREAMER;Wool-gatherer
 DAYLIGHT;Sunlight
 DAYS;Times
 DAYTIME;Hours of light
+DAZE;Stupor
 DAZED;Stunned
 DAZZLE;Blind
 DAZZLING;Brilliant
@@ -3698,6 +3743,7 @@ DECIMATE;Destroy
 DECIPHER;Decode
 DECISION;Ruling
 DECISIVE;Resolute
+DECISIVELY;Resolutely
 DECK;Ship's floor
 DECLARATION;Statement
 DECLARE;Announce
@@ -3753,6 +3799,7 @@ DEFERENTIAL;Respectful
 DEFIANCE;Resistance
 DEFIANT;Rebellious
 DEFIANTLY;Rebelliously
+DEFICIENCY;Shortfall
 DEFICIENT;Lacking
 DEFICIT;Shortfall
 DEFILE;Pollute
@@ -3869,6 +3916,7 @@ DEPENDENT;Reliant
 DEPICT;Portray
 DEPLETE;Use up
 DEPLETION;Exhaustion of supply
+DEPLORABLE;Shameful
 DEPLORABLY;Shockingly badly
 DEPLORE;Condemn
 DEPLOY;Station
@@ -3885,6 +3933,7 @@ DEPRESS;Sadden
 DEPRESSED;Low
 DEPRESSING;Gloomy
 DEPRESSION;Slump
+DEPRIVATION;Hardship
 DEPRIVE;Withhold from
 DEPRIVED;Underprivileged
 DEPTH;Deepness
@@ -3926,6 +3975,7 @@ DESIST;Cease
 DESK;Writing table
 DESKTOP;Computer screen area
 DESOLATE;Bleak
+DESOLATION;Bleakness
 DESPAIR;Hopelessness
 DESPERATE;Frantic
 DESPERATELY;Frantically
@@ -4305,8 +4355,10 @@ DIVIDE;Split
 DIVIDEND;Share payout
 DIVIDER;Partition
 DIVINE;Heavenly
+DIVINELY;Heavenly, in manner
 DIVING;Plunging sport
 DIVISIBLE;Able to be split
+DIVISION;Split
 DIVISIVE;Causing discord
 DIVORCE;End of a marriage
 DIVORCED;No longer married
@@ -4454,6 +4506,7 @@ DRAWN;Haggard
 DREAD;Fear
 DREADED;Feared
 DREADFUL;Awful
+DREADFULLY;Terribly
 DREADLOCKS;Matted hairstyle
 DREAM;Fantasy
 DREAMER;Idealist
@@ -4522,6 +4575,7 @@ DUB;Nickname
 DUBIOUS;Doubtful
 DUCHESS;Duke's wife
 DUCK;Bob down
+DUCKLING;Young waterbird
 DUCT;Tube
 DUD;Failure
 DUDE;Guy
@@ -5184,6 +5238,7 @@ EXCLUDE;Leave out
 EXCLUDING;Apart from
 EXCLUSION;Omission
 EXCLUSIVE;Select
+EXCLUSIVELY;Solely
 EXCURSION;Outing
 EXCUSABLE;Forgivable
 EXCUSE;Pardon
@@ -5283,6 +5338,7 @@ EXPOSITION;Explanation
 EXPOSURE;Publicity
 EXPRESS;Fast train
 EXPRESSION;Look
+EXPRESSIVE;Full of feeling
 EXPRESSLY;Explicitly
 EXPROPRIATE;Seize
 EXPULSION;Ejection
@@ -5400,6 +5456,7 @@ FAMOUSLY;Notably
 FAN;Supporter
 FANATIC;Zealot
 FANATICAL;Zealous
+FANATICALLY;Zealously
 FANATICISM;Zealotry
 FANCIFUL;Imaginary
 FANCY;Ornate
@@ -5439,6 +5496,7 @@ FAT;Plump
 FATAL;Deadly
 FATALISM;Resignation to destiny
 FATALISTIC;Resigned
+FATALITY;Death in an accident
 FATALLY;Mortally
 FATE;Destiny
 FATED;Destined
@@ -5465,6 +5523,7 @@ FEARFULLY;Timidly
 FEARLESS;Brave
 FEARLESSLY;Bravely
 FEASIBILITY;Practicality
+FEASIBLE;Practicable
 FEAST;Banquet
 FEAT;Achievement
 FEATHER;Plume
@@ -5479,6 +5538,7 @@ FEDERATION;Union
 FEE;Charge
 FEEBLE;Weak
 FEED;Nourish
+FEEDBACK;Response
 FEEDBAG;Nosebag
 FEEDING;Nourishing
 FEEL;Touch
@@ -5498,6 +5558,7 @@ FELONY;Serious crime
 FELT;Sensed
 FEMALE;Woman
 FEMININE;Ladylike
+FEMININITY;Womanliness
 FEMINISM;Women's rights movement
 FEMINIST;Women's rights campaigner
 FENCE;Barrier
@@ -5513,6 +5574,7 @@ FEROCITY;Savagery
 FERRET;Rummage
 FERRY;Passenger boat
 FERTILE;Fruitful
+FERTILITY;Fruitfulness
 FERTILIZE;Enrich soil
 FERTILIZER;Plant food
 FERVENT;Passionate
@@ -5533,6 +5595,7 @@ FEUDAL;Medieval
 FEUDALISM;Medieval system
 FEVER;High temperature
 FEVERISH;Hot and restless
+FEVERISHLY;Frantically
 FEW;Not many
 FEZ;Tasselled hat
 FIANCE;Husband-to-be
@@ -5567,6 +5630,7 @@ FIFTY;Half a century
 FIG;Soft fruit
 FIGHT;Battle
 FIGHTER;Boxer
+FIGHTING;Combat
 FIGMENT;Invention
 FIGURATIVE;Metaphorical
 FIGURE;Number
@@ -5603,6 +5667,7 @@ FINANCIER;Banker or investor
 FINANCING;Funding
 FINCH;Small seed-eating bird
 FIND;Discover
+FINDER;Discoverer
 FINDING;Discovery
 FINE;Penalty payment
 FINELY;Delicately
@@ -5613,6 +5678,7 @@ FINGERPRINT;Mark left at a crime scene
 FINGERTIP;End of a digit
 FINICKY;Fussy
 FINISH;End
+FINISHED;Complete
 FINITE;Limited
 FIR;Conifer
 FIRE;Blaze
@@ -5818,6 +5884,7 @@ FOLIAGE;Leaves
 FOLK;People
 FOLKLORE;Traditional tales
 FOLKS;Relatives
+FOLKSY;Homely and informal
 FOLLICLE;Hair root sac
 FOLLOW;Pursue
 FOLLOWER;Disciple
@@ -5831,6 +5898,7 @@ FONT;Typeface
 FOOD;Nourishment
 FOODSTUFF;Edible item
 FOOL;Idiot
+FOOLHARDY;Reckless
 FOOLISH;Silly
 FOOLISHLY;Unwisely
 FOOLISHNESS;Silliness
@@ -5840,6 +5908,7 @@ FOOTAGE;Filmed material
 FOOTBALL;Soccer
 FOOTBRIDGE;Pedestrian crossing over a river
 FOOTHILL;Lower slope
+FOOTHOLD;Secure position
 FOOTING;Secure grip underfoot
 FOOTLIGHTS;Stage-front lamps
 FOOTLOCKER;Soldier's storage trunk
@@ -5850,6 +5919,7 @@ FOOTPRINT;Track left by a shoe
 FOOTSIE;Flirtatious under-table game
 FOOTSTEP;Tread
 FOOTWEAR;Shoes and boots
+FOOTWORK;Nimble stepping
 FOR;In favour of
 FORAGE;Search for food
 FORAY;Raid
@@ -6036,6 +6106,7 @@ FRENZIED;Wild
 FRENZY;Wild excitement
 FREQUENCY;Rate of occurrence
 FREQUENT;Common
+FREQUENTLY;Often
 FRESH;New
 FRESHEN;Revive
 FRESHLY;Newly
@@ -6099,6 +6170,7 @@ FRUGALLY;Thriftily
 FRUIT;Apple or pear
 FRUITCAKE;Rich festive bake
 FRUITFUL;Productive
+FRUITION;Realisation
 FRUITLESS;Futile
 FRUITLESSLY;In vain
 FRUITS;Apples and pears
@@ -6127,6 +6199,7 @@ FUNCTION;Purpose
 FUNCTIONAL;Practical
 FUND;Finance
 FUNDAMENTAL;Basic
+FUNDING;Financial backing
 FUNDS;Money
 FUNERAL;Burial service
 FUNGAL;Relating to mushrooms
@@ -6140,6 +6213,7 @@ FUNNILY;Strangely
 FUNNY;Amusing
 FUR;Pelt
 FURIOUS;Livid
+FURIOUSLY;Angrily
 FURL;Roll up
 FURLONG;Eighth of a mile
 FURNACE;Kiln
@@ -7201,6 +7275,7 @@ HOLY;Sacred
 HOMAGE;Tribute
 HOME;Residence
 HOMECOMING;Return
+HOMELAND;Native country
 HOMELESS;Without shelter
 HOMELY;Cosy
 HOMEMADE;Not shop-bought
@@ -7336,6 +7411,7 @@ HUMANISM;Secular philosophy
 HUMANIST;Secular thinker
 HUMANITIES;Arts subjects
 HUMANITY;Mankind
+HUMANIZE;Make more civilised
 HUMANKIND;Everyone on Earth
 HUMANLY;Within mortal capacity
 HUMBLE;Modest
@@ -7678,6 +7754,7 @@ INCOME;Earnings
 INCOMING;Arriving
 INCOMPETENT;Inept
 INCOMPLETE;Unfinished
+INCONGRUITY;Mismatch
 INCONGRUOUS;Out of place
 INCONTINENT;Lacking self-restraint
 INCORPORATE;Include
@@ -7704,6 +7781,7 @@ INDEBTED;Obliged
 INDECENCY;Lewdness
 INDECENT;Improper
 INDECENTLY;Improperly
+INDECISION;Hesitancy
 INDECISIVE;Wavering
 INDEED;Truly
 INDEFINABLE;Hard to describe
@@ -7797,6 +7875,7 @@ INFESTED;Overrun
 INFIDEL;Unbeliever
 INFIDELITY;Unfaithfulness
 INFIELD;Area near the wicket
+INFILTRATE;Penetrate secretly
 INFILTRATOR;Spy within
 INFINITE;Endless
 INFINITELY;Endlessly
@@ -7825,9 +7904,11 @@ INFO;Facts, for short
 INFOMERCIAL;Long TV advert
 INFORM;Tell
 INFORMAL;Casual
+INFORMALITY;Casualness
 INFORMALLY;Casually
 INFORMANT;Source
 INFORMATION;Facts
+INFORMATIVE;Instructive
 INFORMED;Knowledgeable
 INFORMER;Grass
 INFRACTION;Violation
@@ -7893,6 +7974,7 @@ INNOCENTLY;Naively
 INNOCUOUS;Harmless
 INNOVATE;Break new ground
 INNOVATION;New idea
+INNOVATIVE;Ground-breaking
 INNOVATOR;Pioneer
 INNUENDO;Insinuation
 INNUMERABLE;Countless
@@ -7975,6 +8057,7 @@ INSTRUCTIVE;Educational
 INSTRUCTOR;Teacher
 INSTRUMENT;Tool
 INSULAR;Narrow-minded
+INSULARITY;Narrow-mindedness
 INSULATE;Lag
 INSULATION;Lagging
 INSULIN;Diabetes hormone
@@ -8048,6 +8131,7 @@ INTERVENE;Step in
 INTERVENING;Coming between
 INTERVIEW;Formal meeting with questions
 INTERVIEWER;Questioner
+INTERWEAVE;Intertwine
 INTERWOVE;Entwined
 INTERWOVEN;Entwined
 INTESTATE;Without a will
@@ -8091,10 +8175,12 @@ INUNDATION;Flood
 INVADE;Occupy by force
 INVADER;Attacker
 INVALID;Void
+INVALIDATE;Nullify
 INVALUABLE;Priceless
 INVARIABLE;Unchanging
 INVARIABLY;Always
 INVASION;Incursion
+INVASIVE;Intrusive
 INVENT;Devise
 INVENTION;Creation
 INVENTIVE;Creative
@@ -8114,6 +8200,7 @@ INVISIBLE;Unseen
 INVISIBLY;Unseen
 INVITATION;Request to attend
 INVITE;Ask over
+INVITING;Tempting
 INVOICE;Bill
 INVOKE;Call upon
 INVOLUNTARY;Reflex
@@ -8211,6 +8298,7 @@ JAYWALKER;Careless pedestrian
 JAZZ;Improvised music
 JAZZY;Flashy
 JEALOUS;Envious
+JEALOUSLY;Enviously
 JEALOUSY;Envy
 JEANS;Denims
 JEER;Taunt
@@ -8248,6 +8336,7 @@ JOCK;Sporty type
 JOCKEY;Racing rider
 JOCKSTRAP;Athletic support
 JOCULAR;Humorous
+JOCULARITY;Jokiness
 JOG;Run slowly
 JOGGER;Slow runner
 JOGGING;Slow running
@@ -8290,6 +8379,7 @@ JUGGLE;Keep several balls in the air
 JUGGLER;Circus performer
 JUGULAR;Neck vein
 JUICE;Fruit drink
+JUICY;Succulent
 JUKEBOX;Coin-operated music player
 JUMBLE;Muddle
 JUMBLED;Muddled
@@ -8303,6 +8393,7 @@ JUNCTURE;Point in time
 JUNGLE;Rainforest
 JUNIOR;Younger
 JUNK;Rubbish
+JUNKET;Trip at public expense
 JUNKYARD;Scrapyard
 JUNTA;Military government
 JUROR;Member of a panel of twelve
@@ -8461,6 +8552,7 @@ LANDOWNER;Proprietor of estates
 LANDSCAPE;Scenery
 LANDSLIDE;Overwhelming victory
 LANE;Narrow road
+LANGUAGE;Tongue
 LANGUID;Listless
 LANGUISH;Waste away
 LANGUOROUS;Dreamily lazy
@@ -8875,9 +8967,11 @@ LOUSE;Parasitic insect
 LOUSY;Awful
 LOVABLE;Endearing
 LOVE;Adore
+LOVELINESS;Beauty
 LOVELY;Beautiful
 LOVER;Sweetheart
 LOVERS;Sweethearts
+LOVESICK;Pining
 LOVING;Affectionate
 LOVINGLY;Affectionately
 LOW;Moo
@@ -8910,6 +9004,7 @@ LULL;Calm
 LULLABY;Cradle song
 LUMBER;Timber
 LUMBERING;Clumsy
+LUMBERJACK;Tree feller
 LUMINARY;Leading light
 LUMINOUS;Glowing
 LUMP;Swelling
@@ -9061,6 +9156,7 @@ MANICURE;Nail treatment
 MANICURIST;Nail technician
 MANIFEST;Obvious
 MANIFESTO;Party programme
+MANIFOLD;Many and varied
 MANIPULATE;Control deviously
 MANKIND;Humanity
 MANLINESS;Virility
@@ -9079,6 +9175,7 @@ MANTELPIECE;Fireplace shelf
 MANTLE;Cloak
 MANTRA;Chant
 MANUAL;Handbook
+MANUALLY;By hand
 MANUFACTURE;Produce
 MANURE;Dung
 MANUSCRIPT;Handwritten text
@@ -9093,6 +9190,8 @@ MARCH;Parade
 MARE;Female horse
 MARGARINE;Butter substitute
 MARGIN;Edge
+MARGINAL;Slight
+MARGINALLY;Slightly
 MARIJUANA;Cannabis
 MARINA;Yacht harbour
 MARINADE;Steeping sauce
@@ -9188,6 +9287,7 @@ MATTER;Substance
 MATTING;Floor covering
 MATTRESS;Bed base
 MATURE;Grown-up
+MATURITY;Adulthood
 MAUDLIN;Sentimental
 MAUL;Savage
 MAUSOLEUM;Tomb
@@ -9247,6 +9347,7 @@ MEDICALLY;Clinically
 MEDICATED;Containing a drug
 MEDICATION;Drugs
 MEDICINAL;Healing
+MEDICINE;Remedy
 MEDIEVAL;Of the Middle Ages
 MEDIOCRE;Ordinary
 MEDIOCRITY;Ordinariness
@@ -9320,6 +9421,7 @@ MERE;Simple
 MERELY;Only
 MERGE;Combine
 MERGER;Amalgamation
+MERIDIAN;Line of longitude
 MERINGUE;Whipped egg-white dessert
 MERIT;Worth
 MERMAID;Mythical sea maiden
@@ -9432,6 +9534,7 @@ MINI;Small car or skirt
 MINIATURE;Tiny
 MINIMAL;Smallest possible
 MINIMALLY;To a tiny degree
+MINIMIZE;Reduce to the least
 MINIMUM;Lowest amount
 MINING;Extracting ore
 MINISERIES;Short TV drama run
@@ -9440,6 +9543,7 @@ MINISTER;Government official
 MINISTERIAL;Of a cabinet post
 MINISTRY;Government department
 MINIVAN;People carrier
+MINK;Fur-bearing animal
 MINNOW;Small fish
 MINOR;Under age
 MINORITY;Smaller group
@@ -9599,6 +9703,7 @@ MONOPOLIZE;Dominate
 MONOPOLY;Exclusive control
 MONORAIL;Single-track railway
 MONOTONE;Flat voice
+MONOTONOUS;Tedious
 MONOTONY;Tedium
 MONSOON;Rainy season
 MONSTER;Ogre
@@ -9637,6 +9742,7 @@ MORASS;Swamp
 MORATORIUM;Temporary ban
 MORBID;Gruesome
 MORE;Extra
+MOREOVER;Furthermore
 MORES;Customs
 MORGUE;Mortuary
 MORNING;Before noon
@@ -9693,9 +9799,11 @@ MOUNTAIN;Peak
 MOUNTAINEER;Climber
 MOUNTAINOUS;Hilly
 MOUNTED;On horseback
+MOUNTING;Increasing
 MOURN;Grieve
 MOURNER;Funeral attendee
 MOURNFUL;Sorrowful
+MOURNFULLY;Sorrowfully
 MOURNING;Grieving
 MOUSE;Small rodent
 MOUSSE;Light dessert
@@ -10559,6 +10667,7 @@ OVERTHROW;Topple
 OVERTHROWN;Toppled
 OVERTIME;Extra hours
 OVERTLY;Openly
+OVERTONE;Implication
 OVERTOOK;Passed
 OVERTURE;Opening piece
 OVERTURN;Upset
@@ -10618,6 +10727,7 @@ PAINLESS;Easy
 PAINLESSLY;Easily
 PAINSTAKING;Meticulous
 PAINT;Colour
+PAINTBRUSH;Artist's tool
 PAINTER;Artist
 PAINTS;Colours
 PAIR;Couple
@@ -10821,6 +10931,7 @@ PAUNCHY;Pot-bellied
 PAUSE;Break
 PAVE;Surface a road
 PAVEMENT;Footway
+PAVILION;Cricket clubhouse
 PAW;Animal's foot
 PAWN;Chess piece
 PAWNBROKER;Moneylender
@@ -10885,6 +10996,7 @@ PELVIC;Of the hips
 PELVIS;Hip girdle
 PEN;Biro
 PENAL;Punitive
+PENALIZE;Punish
 PENALTY;Punishment
 PENANCE;Atonement
 PENCHANT;Liking
@@ -10908,6 +11020,7 @@ PENNY;Copper coin
 PENSION;Retirement income
 PENSIVE;Thoughtful
 PENTAGON;Five-sided figure
+PENTHOUSE;Top-floor flat
 PEON;Labourer
 PEOPLE;Folk
 PEP;Vigour
@@ -10950,6 +11063,7 @@ PERIPHERAL;Marginal
 PERIPHERY;Edge
 PERISCOPE;Submarine viewer
 PERISH;Die
+PERISHABLE;Liable to go off
 PERISHABLES;Fresh foods
 PERJURE;Lie under oath
 PERJURY;Lying under oath
@@ -10978,6 +11092,7 @@ PERPLEXING;Baffling
 PERQUISITE;Fringe benefit
 PERSECUTE;Oppress
 PERSECUTION;Oppression
+PERSECUTOR;Oppressor
 PERSEVERE;Keep going
 PERSIST;Continue
 PERSISTENCE;Tenacity
@@ -11076,6 +11191,7 @@ PIANIST;Keyboard player
 PIANO;Keyboard instrument
 PICCOLO;Small flute
 PICK;Choose
+PICKER;Harvester
 PICKET;Striker's protest
 PICKLE;Preserve
 PICKLED;Preserved
@@ -11398,6 +11514,7 @@ POPULATION;Inhabitants
 POPULOUS;Densely inhabited
 PORCELAIN;Fine china
 PORCH;Covered entrance
+PORCUPINE;Spiny rodent
 PORE;Tiny skin opening
 PORK;Pig meat
 POROUS;Permeable
@@ -11420,6 +11537,7 @@ POSE;Sit for an artist
 POSH;Upper-class
 POSITION;Location
 POSITIVE;Certain
+POSITIVELY;Definitely
 POSSE;Band of deputies
 POSSESS;Own
 POSSESSED;Owned
@@ -11478,6 +11596,7 @@ POWDERY;Dusty
 POWER;Strength
 POWERBOAT;Fast motor launch
 POWERFUL;Mighty
+POWERFULLY;Forcefully
 POWERHOUSE;Dynamo
 POWERLESS;Helpless
 POWWOW;Conference
@@ -11540,6 +11659,7 @@ PREEN;Groom feathers
 PREFAB;Kit-built house
 PREFACE;Foreword
 PREFER;Favour
+PREFERABLE;More desirable
 PREFERABLY;Ideally
 PREFERENCE;Liking
 PREFIX;Word beginning
@@ -11731,6 +11851,7 @@ PROHIBIT;Ban
 PROHIBITION;Ban
 PROHIBITIVE;Too costly
 PROJECT;Scheme
+PROJECTILE;Missile
 PROJECTION;Forecast
 PROJECTOR;Slide displayer
 PROLETARIAN;Working-class
@@ -11741,6 +11862,7 @@ PROLOGUE;Introduction
 PROLONG;Extend
 PROLONGED;Lengthy
 PROM;Seafront walk
+PROMENADE;Seafront walk
 PROMINENCE;Fame
 PROMINENT;Eminent
 PROMINENTLY;Conspicuously
@@ -11840,6 +11962,7 @@ PROVISION;Supply
 PROVISIONAL;Temporary
 PROVISIONS;Supplies
 PROVISO;Condition
+PROVOCATION;Incitement
 PROVOCATIVE;Inflammatory
 PROVOKE;Incite
 PROVOST;College head
@@ -11924,6 +12047,7 @@ PUNISH;Penalise
 PUNISHABLE;Liable to penalty
 PUNISHING;Gruelling
 PUNISHMENT;Penalty
+PUNITIVE;Penal
 PUNK;Rebellious rock style
 PUNT;Flat-bottomed boat
 PUNY;Feeble
@@ -12044,6 +12168,7 @@ QUORUM;Minimum attendance
 QUOTA;Allocation
 QUOTABLE;Worth citing
 QUOTATION;Citation
+QUOTE;Cite
 QUOTIENT;Result of division
 RABBI;Jewish teacher
 RABBIT;Bunny
@@ -12456,6 +12581,7 @@ RELIGIOUS;Devout
 RELIGIOUSLY;Devoutly
 RELINQUISH;Give up
 RELISH;Enjoy
+RELIVE;Experience again
 RELOCATE;Move
 RELOCATION;Move
 RELUCTANCE;Unwillingness
@@ -12579,6 +12705,7 @@ REPULSE;Drive back
 REPULSION;Disgust
 REPULSIVE;Revolting
 REPUTABLE;Respected
+REPUTATION;Standing
 REPUTE;Standing
 REPUTED;Supposed
 REPUTEDLY;Supposedly
@@ -12751,6 +12878,7 @@ REVIVE;Resuscitate
 REVOKE;Cancel
 REVOLT;Uprising
 REVOLTING;Disgusting
+REVOLUTION;Uprising
 REVOLVE;Rotate
 REVOLVER;Handgun
 REVUE;Variety show
@@ -13090,6 +13218,7 @@ SANE;Rational
 SANG;Crooned
 SANITARY;Hygienic
 SANITATION;Hygiene
+SANITIZE;Disinfect
 SANITY;Reason
 SANK;Went under
 SAP;Tree fluid
@@ -13467,6 +13596,7 @@ SEXUALITY;Orientation
 SEXUALLY;In terms of gender
 SHABBILY;Meanly
 SHABBY;Worn out
+SHACK;Hut
 SHACKLE;Fetter
 SHADE;Shadow
 SHADES;Sunglasses
@@ -13480,6 +13610,7 @@ SHAKE;Tremble
 SHAKEDOWN;Extortion
 SHAKEN;Upset
 SHAKILY;Unsteadily
+SHAKY;Unsteady
 SHALL;Will
 SHALLOW;Not deep
 SHALLOWNESS;Superficiality
@@ -13692,6 +13823,7 @@ SILENTLY;Quietly
 SILHOUETTE;Outline
 SILICON;Chip element
 SILK;Fine fabric from worms
+SILKEN;Smooth and soft
 SILKY;Smooth
 SILL;Window ledge
 SILLINESS;Foolishness
@@ -13932,6 +14064,7 @@ SMORGASBORD;Buffet
 SMOTHER;Suffocate
 SMUDGE;Smear
 SMUG;Self-satisfied
+SMUGGLE;Bring in illegally
 SMUGGLER;Contraband runner
 SMUGGLING;Contraband trade
 SMUGLY;Complacently
@@ -14151,6 +14284,7 @@ SPANKING;Brisk
 SPAR;Box for practice
 SPARE;Extra
 SPARINGLY;Economically
+SPARK;Glint of fire
 SPARKLE;Glitter
 SPARKLER;Handheld firework
 SPARKLING;Fizzy
@@ -14390,6 +14524,7 @@ STAND;Be upright
 STANDARD;Norm
 STANDARDIZE;Make uniform
 STANDBY;Reserve
+STANDING;Status
 STANDOFF;Deadlock
 STANDOUT;Star performer
 STANDPOINT;Viewpoint
@@ -14561,6 +14696,7 @@ STOREY;Floor of a building
 STORK;Long-legged bird
 STORM;Tempest
 STORMY;Tempestuous
+STORY;Tale
 STORYTELLER;Narrator
 STOUT;Dark beer
 STOVE;Cooker
@@ -14700,6 +14836,7 @@ SUBLIMINAL;Subconscious
 SUBMARINE;Underwater vessel
 SUBMERGE;Immerse
 SUBMERGED;Underwater
+SUBMERSION;Immersion
 SUBMISSION;Surrender
 SUBMISSIVE;Meek
 SUBMIT;Yield
@@ -14712,6 +14849,7 @@ SUBSERVIENT;Servile
 SUBSIDE;Abate
 SUBSIDIARY;Secondary company
 SUBSIDIZE;Fund in part
+SUBSIDIZED;Financially supported
 SUBSIDY;Grant
 SUBSIST;Survive
 SUBSISTENCE;Bare survival
@@ -14722,6 +14860,7 @@ SUBSTITUTE;Replacement
 SUBTERFUGE;Trickery
 SUBTITLES;Captions on a film
 SUBTLE;Understated
+SUBTLETY;Finesse
 SUBTLY;Delicately
 SUBTRACT;Take away
 SUBTRACTION;Taking away
@@ -14835,6 +14974,7 @@ SUPERVISORY;Managerial
 SUPPER;Evening meal
 SUPPLANT;Replace
 SUPPLE;Flexible
+SUPPLEMENT;Addition
 SUPPLIER;Provider
 SUPPLIES;Provisions
 SUPPLY;Provide
@@ -15167,6 +15307,7 @@ TELESCOPE;Stargazer's instrument
 TELESCOPIC;Extendable
 TELETHON;Charity broadcast
 TELEVISE;Broadcast
+TELEVISION;The box
 TELL;Inform
 TELLER;Bank clerk
 TELLING;Revealing
@@ -15643,6 +15784,7 @@ TRASH;Rubbish
 TRASHY;Cheap and nasty
 TRAUMA;Shock
 TRAUMATIC;Distressing
+TRAUMATIZE;Deeply distress
 TRAVEL;Journey
 TRAVELS;Journeys
 TRAVERSE;Cross
@@ -15910,6 +16052,7 @@ UNAVOIDABLY;Inevitably
 UNAWARE;Oblivious
 UNAWARES;By surprise
 UNBALANCED;Lopsided
+UNBEARABLE;Intolerable
 UNBEARABLY;Intolerably
 UNBEATABLE;Invincible
 UNBEATEN;Undefeated
@@ -16264,6 +16407,7 @@ VALIANTLY;Bravely
 VALID;Legitimate
 VALIDATE;Confirm
 VALIDITY;Soundness
+VALLEY;Dale
 VALUABLE;Precious
 VALUABLES;Treasures
 VALUE;Worth
@@ -16304,6 +16448,7 @@ VEER;Swerve
 VEGAN;Strict vegetarian
 VEGETABLE;Carrot or leek
 VEGETARIAN;Meat-free eater
+VEGETATION;Plant life
 VEGGIE;Vegetarian
 VEGGIES;Greens
 VEHEMENT;Passionate
@@ -16313,6 +16458,7 @@ VEHICULAR;Of motor traffic
 VEIL;Bride's face covering
 VEILED;Covert
 VEIN;Blood vessel
+VELOCITY;Speed
 VELOUR;Plush fabric
 VELVET;Soft pile fabric
 VELVETY;Smooth and soft
@@ -16425,6 +16571,7 @@ VIRAL;Spreading rapidly online
 VIRGIN;Untouched
 VIRGINITY;Chastity
 VIRILE;Manly
+VIRILITY;Manliness
 VIRTUAL;Simulated
 VIRTUALLY;Almost
 VIRTUE;Goodness
@@ -16450,6 +16597,7 @@ VISUAL;Optical
 VISUALIZE;Imagine
 VISUALLY;Optically
 VITAL;Essential
+VITALITY;Liveliness
 VITALLY;Crucially
 VITAMIN;Nutrient
 VIVACIOUS;Lively
@@ -16468,6 +16616,7 @@ VODKA;Russian spirit
 VOGUE;Fashion
 VOICE;Speak
 VOID;Empty space
+VOLATILE;Unstable
 VOLATILITY;Instability
 VOLCANIC;Explosive
 VOLCANO;Erupting mountain
@@ -16477,6 +16626,7 @@ VOLLEYBALL;Beach team sport
 VOLT;Unit of electrical potential
 VOLTAGE;Electrical force
 VOLUME;Loudness
+VOLUMINOUS;Ample
 VOLUNTARILY;Willingly
 VOLUNTARY;Optional
 VOLUNTEER;Offer freely
@@ -16554,6 +16704,7 @@ WAREHOUSE;Depot
 WARES;Goods
 WARFARE;Fighting
 WARHEAD;Missile tip
+WARILY;Cautiously
 WARLIKE;Belligerent
 WARLOCK;Sorcerer
 WARLORD;Military chief
@@ -16828,6 +16979,7 @@ WIPER;Windscreen blade
 WIRE;Cable
 WIRED;Hyperactive
 WIRETAP;Bug a phone
+WIRING;Electrical circuits
 WIRY;Lean and sinewy
 WISDOM;Sagacity
 WISE;Sage
@@ -16902,6 +17054,7 @@ WORDING;Phrasing
 WORDY;Verbose
 WORE;Had on
 WORK;Labour
+WORKABLE;Practicable
 WORKAHOLIC;Compulsive grafter
 WORKBENCH;Carpenter's table
 WORKBOOK;Practice pad
