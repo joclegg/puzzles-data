@@ -9,7 +9,7 @@ The puzzle banks and word lists the Android, iOS and web apps download from http
 | `sudoku/`, `kakuro/`, `slideout/`, `solitaire/`, `wordwheel/` | Puzzle banks, one file per mode or level. |
 | `crossword/` | Crossword grids by size and their clues. |
 | `words/` | Five Letters' answer and guess lists. |
-| `sources/crossword/` | The crossword word list. Not published. |
+| `sources/crossword/` | The crossword word list, and `excluded.txt`: US spellings, US-only words and anything unsuitable for a family app, which the generator skips. Not published. |
 | `scripts/banks.py` | The list of published folders, used by the other scripts and the publish workflow. |
 | `scripts/check_duplicates.py` | Fails if a bank holds the same puzzle twice. |
 | `scripts/crossword.py` | Crossword grids, run by `.github/workflows/crossword.yml`. |
@@ -33,5 +33,6 @@ The puzzle banks and word lists the Android, iOS and web apps download from http
 - MUST add any new top-level bank folder to `scripts/banks.py`, or it won't be checked or published.
 - MUST keep `wordwheel/NOTICE.md` with the Word Wheel lists, and `crossword/NOTICE.md` with the crossword lists.
 - MUST keep every crossword answer in `crossword/clues.txt`, one `WORD;clue` line each, sorted: `python3 scripts/check_clues.py` must pass.
-- MUST keep `crossword/clues.txt` to British quick-crossword clues: short, fair, matching the answer's form, never containing the answer.
+- MUST keep `crossword/clues.txt` to British quick-crossword clues: short, fair, matching the answer's form, never containing the answer or sharing its root.
+- MUST add a word to `sources/crossword/excluded.txt`, not delete it from `words.txt`, to keep it out of new crosswords.
 - MUST treat every merge to `main` as a release: it publishes straight to the apps.

@@ -3,12 +3,14 @@
 Builds a grid on the usual British lattice (alternate cells in alternate rows
 and columns are blocks, so about half the letters are checked), adds blocks
 with 180-degree rotational symmetry until no word is too long for the size, then
-fills it by backtracking from sources/crossword/words.txt. Clues are written
+fills it by backtracking from sources/crossword/words.txt, less the words in
+sources/crossword/excluded.txt. Clues are written
 separately, into crossword/clues.txt.
 
 Usage: python3 scripts/crossword.py SIZE COUNT [--seed N] [--out PATH]
 Appends COUNT new grids to PATH (default crossword/<name>.txt), skipping any
-grid already in the file. Each line is `size;solution`, the solution row by
+grid already in the file. No word appears in more than --max-uses grids, so
+short filler words don't repeat across the bank. Each line is `size;solution`, the solution row by
 row with `#` for a block.
 """
 import argparse
@@ -20,6 +22,8 @@ MIN_WORD = 3
 MAX_WORD = 15
 ROOT = Path(__file__).resolve().parent.parent
 WORDS_PATH = ROOT / "sources" / "crossword" / "words.txt"
+# US spellings, US-only words and anything unsuitable for a family app.
+EXCLUDED_PATH = ROOT / "sources" / "crossword" / "excluded.txt"
 NAMES = {11: "small", 13: "medium", 15: "large"}
 # The longest word each size allows, so grids break up like British ones.
 LONGEST = {11: 9, 13: 11, 15: 13}
@@ -40,12 +44,22 @@ class Lexicon:
                 key = (n, i, ch)
                 self.masks[key] = self.masks.get(key, 0) | bit
         self.full = {n: (1 << len(ws)) - 1 for n, ws in self.words.items()}
+        self.index = {w: (len(w), 1 << i) for n, ws in self.words.items()
+                      for i, w in enumerate(ws)}
+        self.uses = {}
+
+    def use(self, word, cap):
+        """Counts a use of word, retiring it once it reaches cap."""
+        self.uses[word] = self.uses.get(word, 0) + 1
+        if self.uses[word] >= cap and word in self.index:
+            n, bit = self.index[word]
+            self.full[n] &= ~bit
 
 
 def load_words():
-    words = WORDS_PATH.read_text().splitlines()
-    words = [w.strip().upper() for w in words]
-    return Lexicon(w for w in words
+    words = [w.strip().upper() for w in WORDS_PATH.read_text().splitlines()]
+    excluded = set(EXCLUDED_PATH.read_text().split())
+    return Lexicon(w for w in words if w not in excluded
                    if w.isalpha() and MIN_WORD <= len(w) <= MAX_WORD)
 
 
@@ -189,10 +203,37 @@ def fill(size, runs, lex, rng, limit=2000):
                    for c in range(size))
 
 
-def generate(size, rng, lex):
+def answers(line):
+    """The answers in a `size;solution` line."""
+    size, solution = line.split(";")
+    n = int(size)
+    grid = [[solution[r * n + c] == "#" for c in range(n)] for r in range(n)]
+    return ["".join(solution[r * n + c] for r, c in run)
+            for run in slots(grid, n)]
+
+
+def load_clues():
+    path = ROOT / "crossword" / "clues.txt"
+    if not path.exists():
+        return {}
+    return dict(line.split(";", 1) for line in path.read_text().splitlines()
+                if ";" in line)
+
+
+def clashes(line, clues):
+    """True if two answers share a clue, or a clue is another answer."""
+    words = answers(line)
+    seen = [clues[w].lower() for w in words if w in clues]
+    if len(seen) != len(set(seen)):
+        return True
+    lowered = {w.lower() for w in words}
+    return any(clue in lowered for clue in seen)
+
+
+def generate(size, rng, lex, clues):
     while True:
         solution = fill(size, make_pattern(size, rng), lex, rng)
-        if solution:
+        if solution and not clashes(f"{size};{solution}", clues):
             return f"{size};{solution}"
 
 
@@ -202,6 +243,10 @@ def main():
     parser.add_argument("count", type=int)
     parser.add_argument("--seed", type=int)
     parser.add_argument("--out", type=Path)
+    parser.add_argument("--max-uses", type=int,
+                        help="most grids one word may appear in, counting "
+                        "the grids already in the file (default: 2%% of "
+                        "COUNT, at least 5)")
     args = parser.parse_args()
 
     out = args.out or ROOT / "crossword" / f"{NAMES[args.size]}.txt"
@@ -209,14 +254,21 @@ def main():
     existing = set(out.read_text().splitlines()) if out.exists() else set()
     rng = random.Random(args.seed)
     lex = load_words()
+    clues = load_clues()
+    cap = args.max_uses or max(5, args.count // 50)
+    for line in existing:
+        for word in answers(line):
+            lex.use(word, cap)
 
     added = 0
     with out.open("a") as f:
         while added < args.count:
-            line = generate(args.size, rng, lex)
+            line = generate(args.size, rng, lex, clues)
             if line in existing:
                 continue
             existing.add(line)
+            for word in answers(line):
+                lex.use(word, cap)
             f.write(line + "\n")
             f.flush()
             added += 1
