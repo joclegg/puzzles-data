@@ -26,4 +26,4 @@ Every merge to `main` publishes the banks to https://joclegg.github.io/puzzles-d
 
 The generators live in puzzles-android (`./gradlew :<game>:engine:generateBank`) and puzzles-web (`scripts/solitaireBank.mjs`), and write here.
 
-Crosswords are the exception: the Crossword workflow (`.github/workflows/crossword.yml`, run by hand) has Claude clue `sources/crossword/words.txt` in parallel jobs (`scripts/clues.py`, `scripts/merge_clues.py`), then fills grids from the clued words only (`scripts/crossword.py`) and opens a pull request. It needs an `ANTHROPIC_API_KEY` repository secret. Words Claude turns down go to `sources/crossword/rejected.txt` and are never asked again.
+Crosswords are the exception: the Crossword workflow (`.github/workflows/crossword.yml`, run by hand) generates grids in parallel jobs with `scripts/crossword.py`, from the common words in `sources/crossword/words.txt`, and opens a pull request. Clues for any new answers are then written into `crossword/clues.txt` on that pull request; `python3 scripts/check_clues.py --list` lists the answers still missing one, and CI fails until there are none.

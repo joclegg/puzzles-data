@@ -3,10 +3,10 @@
 Builds a grid on the usual British lattice (alternate cells in alternate rows
 and columns are blocks, so about half the letters are checked), adds blocks
 with 180-degree rotational symmetry until no word is too long for the size, then
-fills it by backtracking. Words come from crossword/clues.txt, so every answer
-has a clue; with --unclued, from all of sources/crossword/words.txt.
+fills it by backtracking from sources/crossword/words.txt. Clues are written
+separately, into crossword/clues.txt.
 
-Usage: python3 scripts/crossword.py SIZE COUNT [--seed N] [--out PATH] [--unclued]
+Usage: python3 scripts/crossword.py SIZE COUNT [--seed N] [--out PATH]
 Appends COUNT new grids to PATH (default crossword/<name>.txt), skipping any
 grid already in the file. Each line is `size;solution`, the solution row by
 row with `#` for a block.
@@ -19,8 +19,7 @@ from pathlib import Path
 MIN_WORD = 3
 MAX_WORD = 15
 ROOT = Path(__file__).resolve().parent.parent
-CLUES_PATH = ROOT / "crossword" / "clues.txt"
-FALLBACK_PATH = ROOT / "sources" / "crossword" / "words.txt"
+WORDS_PATH = ROOT / "sources" / "crossword" / "words.txt"
 NAMES = {11: "small", 13: "medium", 15: "large"}
 # The longest word each size allows, so grids break up like British ones.
 LONGEST = {11: 9, 13: 11, 15: 13}
@@ -43,15 +42,8 @@ class Lexicon:
         self.full = {n: (1 << len(ws)) - 1 for n, ws in self.words.items()}
 
 
-def load_words(unclued=False):
-    if unclued:
-        words = FALLBACK_PATH.read_text().splitlines()
-    elif CLUES_PATH.exists():
-        words = [line.split(";", 1)[0] for line in
-                 CLUES_PATH.read_text().splitlines() if ";" in line]
-    else:
-        raise SystemExit(f"{CLUES_PATH} is missing: write clues first, "
-                         "or pass --unclued to test with every word")
+def load_words():
+    words = WORDS_PATH.read_text().splitlines()
     words = [w.strip().upper() for w in words]
     return Lexicon(w for w in words
                    if w.isalpha() and MIN_WORD <= len(w) <= MAX_WORD)
@@ -210,15 +202,13 @@ def main():
     parser.add_argument("count", type=int)
     parser.add_argument("--seed", type=int)
     parser.add_argument("--out", type=Path)
-    parser.add_argument("--unclued", action="store_true",
-                        help="use every word, clued or not (for testing)")
     args = parser.parse_args()
 
     out = args.out or ROOT / "crossword" / f"{NAMES[args.size]}.txt"
     out.parent.mkdir(parents=True, exist_ok=True)
     existing = set(out.read_text().splitlines()) if out.exists() else set()
     rng = random.Random(args.seed)
-    lex = load_words(args.unclued)
+    lex = load_words()
 
     added = 0
     with out.open("a") as f:

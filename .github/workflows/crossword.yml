@@ -1,8 +1,7 @@
 name: Crossword
 
-# Clues the crossword word list with Claude in parallel shards, then fills
-# grids from the clued words and opens a pull request with the results.
-# Re-running only clues words that have neither a clue nor a rejection yet.
+# Generates crossword grids in parallel shards, appends them to the banks and
+# opens a pull request. Clues are written separately, into crossword/clues.txt.
 
 on:
   workflow_dispatch:
@@ -11,18 +10,8 @@ on:
         description: Grids to add per size
         default: "3000"
       shards:
-        description: Parallel clue jobs
-        default: "40"
-      model:
-        description: Claude model for the clues
-        default: claude-opus-5-5
-      effort:
-        description: Effort for the clues (low, medium, high)
-        default: medium
-      skip_clues:
-        description: Only generate grids from the clues already here
-        type: boolean
-        default: false
+        description: Parallel jobs per size
+        default: "10"
 
 permissions:
   contents: read
@@ -34,33 +23,35 @@ jobs:
       shards: ${{ steps.plan.outputs.shards }}
     steps:
       - id: plan
-        run: |
-          python3 -c "import json; print('shards=' + json.dumps(list(range(int('${{ inputs.shards }}')))))" >> "$GITHUB_OUTPUT"
+        env:
+          SHARDS: ${{ inputs.shards }}
+        run: python3 -c "import json, os; print('shards=' + json.dumps(list(range(int(os.environ['SHARDS'])))))" >> "$GITHUB_OUTPUT"
 
-  clues:
+  generate:
     needs: plan
-    if: ${{ !inputs.skip_clues }}
     runs-on: ubuntu-latest
     strategy:
-      fail-fast: false
       matrix:
+        size: [11, 13, 15]
         shard: ${{ fromJSON(needs.plan.outputs.shards) }}
     steps:
       - uses: actions/checkout@v4
-      - run: python3 scripts/clues.py ${{ matrix.shard }} ${{ inputs.shards }} out/clues-${{ matrix.shard }}.txt --model "${{ inputs.model }}" --effort "${{ inputs.effort }}"
+      - name: Generate this shard's share
         env:
-          ANTHROPIC_API_KEY: ${{ secrets.ANTHROPIC_API_KEY }}
+          COUNT: ${{ inputs.count }}
+          SHARDS: ${{ inputs.shards }}
+        run: |
+          share=$(( (COUNT + SHARDS - 1) / SHARDS ))
+          python3 scripts/crossword.py ${{ matrix.size }} $share \
+            --seed ${{ github.run_id }}${{ matrix.size }}${{ matrix.shard }} \
+            --out out/${{ matrix.size }}-${{ matrix.shard }}.txt
       - uses: actions/upload-artifact@v4
-        if: always()
         with:
-          name: clues-${{ matrix.shard }}
+          name: grids-${{ matrix.size }}-${{ matrix.shard }}
           path: out/
-          if-no-files-found: ignore
 
-  grids:
-    needs: clues
-    # Runs even if some clue shards failed: their words wait for the next run.
-    if: ${{ !cancelled() }}
+  merge:
+    needs: generate
     runs-on: ubuntu-latest
     permissions:
       contents: write
@@ -68,18 +59,33 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/download-artifact@v4
-        continue-on-error: true
         with:
-          pattern: clues-*
+          pattern: grids-*
           path: out
           merge-multiple: true
-      - name: Merge the clues
-        run: python3 scripts/merge_clues.py out
-      - name: Generate the grids
+      - name: Append new grids to the banks
+        env:
+          COUNT: ${{ inputs.count }}
         run: |
-          for size in 11 13 15; do
-            python3 scripts/crossword.py $size ${{ inputs.count }} --seed ${{ github.run_id }}$size
-          done
+          python3 - <<'EOF'
+          import os
+          from pathlib import Path
+          names = {11: "small", 13: "medium", 15: "large"}
+          count = int(os.environ["COUNT"])
+          for size, name in names.items():
+              bank = Path("crossword") / f"{name}.txt"
+              seen = set(bank.read_text().splitlines()) if bank.exists() else set()
+              new = []
+              for shard in sorted(Path("out").glob(f"{size}-*.txt"),
+                                  key=lambda p: int(p.stem.split("-")[1])):
+                  for line in shard.read_text().splitlines():
+                      if line and line not in seen and len(new) < count:
+                          seen.add(line)
+                          new.append(line)
+              with bank.open("a") as f:
+                  f.writelines(line + "\n" for line in new)
+              print(f"{bank}: added {len(new)}")
+          EOF
       - run: python3 scripts/check_duplicates.py
       - name: Open a pull request
         env:
@@ -89,18 +95,10 @@ jobs:
           git config user.name "github-actions[bot]"
           git config user.email "41898333+github-actions[bot]@users.noreply.github.com"
           git checkout -b "$branch"
-          git add crossword sources/crossword
-          git commit -m "Add crossword clues and grids"
+          git add crossword
+          git commit -m "Add crossword grids"
           git push origin "$branch"
-          summary=$(python3 -c "
-          from pathlib import Path
-          for p in ['crossword/clues.txt', 'sources/crossword/rejected.txt', 'crossword/small.txt', 'crossword/medium.txt', 'crossword/large.txt']:
-              f = Path(p)
-              print(f'- \`{p}\`: {len(f.read_text().splitlines()) if f.exists() else 0} lines')
-          ")
           gh pr create --base main --head "$branch" \
-            --title "Add crossword clues and grids" \
-            --body "Generated by the Crossword workflow, run ${{ github.run_id }}.
-
-          $summary" \
+            --title "Add crossword grids" \
+            --body "Generated by the Crossword workflow, run ${{ github.run_id }}. Clues still need writing for any new answers before this merges." \
             || echo "::warning::Pushed $branch but couldn't open a pull request. Allow GitHub Actions to create pull requests in the repository's Actions settings, or open one from the branch."
