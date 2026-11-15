@@ -1,0 +1,103 @@
+name: Crossword
+
+# Generates crossword grids in parallel shards and commits them to the branch
+# it runs on. Runs on every push to a branch that changes the generator or this
+# workflow (pushes the workflow makes itself don't trigger it), or by hand.
+# Clues are written separately, into crossword/clues.txt.
+
+on:
+  push:
+    branches-ignore: [main]
+    paths:
+      - .github/workflows/crossword.yml
+      - scripts/crossword.py
+      - sources/crossword/**
+  workflow_dispatch:
+    inputs:
+      count:
+        description: Grids to add per size
+        default: "3000"
+      shards:
+        description: Parallel jobs per size
+        default: "10"
+
+permissions:
+  contents: read
+
+jobs:
+  plan:
+    runs-on: ubuntu-latest
+    outputs:
+      shards: ${{ steps.plan.outputs.shards }}
+    steps:
+      - id: plan
+        env:
+          SHARDS: ${{ inputs.shards || '10' }}
+        run: python3 -c "import json, os; print('shards=' + json.dumps(list(range(int(os.environ['SHARDS'])))))" >> "$GITHUB_OUTPUT"
+
+  generate:
+    needs: plan
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        size: [11, 13, 15]
+        shard: ${{ fromJSON(needs.plan.outputs.shards) }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generate this shard's share
+        env:
+          COUNT: ${{ inputs.count || '3000' }}
+          SHARDS: ${{ inputs.shards || '10' }}
+        run: |
+          share=$(( (COUNT + SHARDS - 1) / SHARDS ))
+          python3 scripts/crossword.py ${{ matrix.size }} $share \
+            --seed ${{ github.run_id }}${{ matrix.size }}${{ matrix.shard }} \
+            --out out/${{ matrix.size }}-${{ matrix.shard }}.txt
+      - uses: actions/upload-artifact@v4
+        with:
+          name: grids-${{ matrix.size }}-${{ matrix.shard }}
+          path: out/
+
+  merge:
+    needs: generate
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/download-artifact@v4
+        with:
+          pattern: grids-*
+          path: out
+          merge-multiple: true
+      - name: Append new grids to the banks
+        env:
+          COUNT: ${{ inputs.count || '3000' }}
+        run: |
+          python3 - <<'EOF'
+          import os
+          from pathlib import Path
+          names = {11: "small", 13: "medium", 15: "large"}
+          count = int(os.environ["COUNT"])
+          for size, name in names.items():
+              bank = Path("crossword") / f"{name}.txt"
+              seen = set(bank.read_text().splitlines()) if bank.exists() else set()
+              new = []
+              for shard in sorted(Path("out").glob(f"{size}-*.txt"),
+                                  key=lambda p: int(p.stem.split("-")[1])):
+                  for line in shard.read_text().splitlines():
+                      if line and line not in seen and len(new) < count:
+                          seen.add(line)
+                          new.append(line)
+              with bank.open("a") as f:
+                  f.writelines(line + "\n" for line in new)
+              print(f"{bank}: added {len(new)}")
+          EOF
+      - run: python3 scripts/check_duplicates.py
+      - name: Commit the grids to this branch
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898333+github-actions[bot]@users.noreply.github.com"
+          git add crossword
+          git commit -m "Add crossword grids"
+          git push origin HEAD:${{ github.ref_name }}
